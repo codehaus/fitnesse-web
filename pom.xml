@@ -1,0 +1,50 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.codehaus.fitnesse-web</groupId>
+    <artifactId>fitnesse-web</artifactId>
+    <packaging>pom</packaging>
+    <name>fitnesse-web</name>
+    <version>1.0</version>
+    <description>Fitnesse Web</description>
+    <developers>
+        <developer>
+            <id>krzycho</id>
+            <name>Krzysztof Rajda</name>
+            <email>krzysztof.rajda@sabre.com</email>
+            <timezone>CET</timezone>
+        </developer>
+        <developer>
+            <id>mateo</id>
+            <name>Mateusz Prokopowicz</name>
+            <email>mateusz.prokopowicz@sabre.com</email>
+            <timezone>CET</timezone>
+        </developer>
+    </developers>
+    <modules>
+        <module>fitnesse-server-maven-plugin</module>
+        <module>fitnesse-web-proxy</module>
+    </modules>
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.5</source>
+                    <target>1.5</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

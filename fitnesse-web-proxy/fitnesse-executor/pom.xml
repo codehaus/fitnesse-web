@@ -1,0 +1,40 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <parent>
+        <groupId>org.codehaus.fitnesse-web</groupId>
+        <artifactId>fitnesse-web-proxy</artifactId>
+        <version>1.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.codehaus.fitnesse-web</groupId>
+    <artifactId>fitnesse-executor</artifactId>
+    <version>1.0</version>
+    <packaging>jar</packaging>
+    <name>fitnesse-executor</name>
+    <distributionManagement>
+        <repository>
+            <id>crane-repository</id>
+            <name>Crane Maven Repository</name>
+            <url>file://${basedir}/../../crane-maven-repository</url>
+        </repository>
+    </distributionManagement>
+    <repositories>
+        <repository>
+            <id>crane-repository</id>
+            <name>Crane Maven Repository</name>
+            <url>file://${basedir}/../../crane-maven-repository</url>
+        </repository>
+    </repositories>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+            <version>2.5.6</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>2.5.6</version>
+        </dependency>
+    </dependencies>
+</project>

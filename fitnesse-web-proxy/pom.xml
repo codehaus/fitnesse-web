@@ -1,0 +1,37 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.codehaus.fitnesse-web</groupId>
+        <artifactId>fitnesse-web</artifactId>
+        <version>1.0</version>
+    </parent>
+    <groupId>org.codehaus.fitnesse-web</groupId>
+    <artifactId>fitnesse-web-proxy</artifactId>
+    <version>1.0</version>
+    <packaging>pom</packaging>
+    <name>crane-acceptance-tests</name>
+    <distributionManagement>
+        <repository>
+            <id>fitnesse-web-repository</id>
+            <name>Fitnesse Web Repository</name>
+            <url>https://dav.codehaus.org/repository/fitnesse-web/</url>
+        </repository>
+    </distributionManagement>
+    <dependencies>
+        <dependency>
+            <groupId>org.fitnesse</groupId>
+            <artifactId>fitnesse</artifactId>
+            <version>20081201</version>
+        </dependency>
+        <dependency>
+            <groupId>org.fitnesse</groupId>
+            <artifactId>fitlibrary</artifactId>
+            <version>20081102</version>
+        </dependency>
+    </dependencies>
+    <modules>
+        <module>fitnesse-executor</module>
+        <module>fitnesse-proxy</module>
+    </modules>
+</project>
