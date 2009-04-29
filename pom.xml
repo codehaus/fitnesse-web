@@ -5,7 +5,7 @@
     <artifactId>fitnesse-web</artifactId>
     <packaging>pom</packaging>
     <name>fitnesse-web</name>
-    <version>1.0</version>
+    <version>1.0.1</version>
     <description>Fitnesse Web</description>
     <developers>
         <developer>
@@ -25,6 +25,13 @@
         <module>fitnesse-server-maven-plugin</module>
         <module>fitnesse-web-proxy</module>
     </modules>
+    <distributionManagement>
+        <repository>
+            <id>org.codehaus.fitnesse-web</id>
+            <name>Fitnesse Web Repository</name>
+            <url>dav:https://dav.codehaus.org/repository/fitnesse-web/</url>
+        </repository>
+    </distributionManagement>
     <build>
         <plugins>
             <plugin>

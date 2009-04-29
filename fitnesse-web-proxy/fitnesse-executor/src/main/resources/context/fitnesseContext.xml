@@ -7,16 +7,13 @@ http://www.springframework.org/schema/beans http://www.springframework.org/schem
     <bean id="taskExecutor" class="org.springframework.core.task.SimpleAsyncTaskExecutor">
         <property name="concurrencyLimit" value="1"/>
         <property name="daemon" value="true"/>
-        <property name="threadNamePrefix" value="crane-thread"/>
-        <property name="threadGroupName" value="crane-threads"/>
+        <property name="threadNamePrefix" value="fitnesse-execution-thread"/>
+        <property name="threadGroupName" value="fitnesse-execution-threads"/>
     </bean>
 
     <bean class="org.codehaus.fitnesseweb.executor.WebFitServerController" init-method="init" destroy-method="destroy">
         <property name="taskExecutor" ref="taskExecutor"/>
         <property name="socketPort" value="7777"/>
         <property name="verbose" value="true"/>
-
     </bean>
-
-
 </beans>

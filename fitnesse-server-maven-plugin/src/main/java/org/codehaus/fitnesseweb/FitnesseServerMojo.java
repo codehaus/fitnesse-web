@@ -57,8 +57,20 @@ public class FitnesseServerMojo extends AbstractMojo {
      * @parameter default-value="true"
      */
     public boolean background;
+	
+    /**
+     * System parameters to set
+     * 
+     * @parameter
+     */
+	public Property[] systemProperties;
 
     public void execute() throws MojoExecutionException {
+    	if (systemProperties != null) {    	
+    		for (Property property : systemProperties) {
+    			System.setProperty(property.getKey(), property.getValue());
+    		}
+    	}
         Runnable fitnesseTask = new Runnable() {
             public void run() {
                 List<String> args = new LinkedList<String>();

@@ -11,20 +11,6 @@
     <version>1.0</version>
     <packaging>jar</packaging>
     <name>fitnesse-executor</name>
-    <distributionManagement>
-        <repository>
-            <id>crane-repository</id>
-            <name>Crane Maven Repository</name>
-            <url>file://${basedir}/../../crane-maven-repository</url>
-        </repository>
-    </distributionManagement>
-    <repositories>
-        <repository>
-            <id>crane-repository</id>
-            <name>Crane Maven Repository</name>
-            <url>file://${basedir}/../../crane-maven-repository</url>
-        </repository>
-    </repositories>
     <dependencies>
         <dependency>
             <groupId>org.springframework</groupId>
