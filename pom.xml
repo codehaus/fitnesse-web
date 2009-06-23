@@ -5,7 +5,7 @@
     <artifactId>fitnesse-web</artifactId>
     <packaging>pom</packaging>
     <name>fitnesse-web</name>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <description>Fitnesse Web</description>
     <developers>
         <developer>
@@ -24,6 +24,7 @@
     <modules>
         <module>fitnesse-server-maven-plugin</module>
         <module>fitnesse-web-proxy</module>
+        <module>fitnesse-web-fixture</module>
     </modules>
     <distributionManagement>
         <repository>

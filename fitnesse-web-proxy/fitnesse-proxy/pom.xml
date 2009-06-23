@@ -4,9 +4,8 @@
     <parent>
         <groupId>org.codehaus.fitnesse-web</groupId>
         <artifactId>fitnesse-web-proxy</artifactId>
-        <version>1.0</version>
+        <version>1.0.2</version>
     </parent>
-    <groupId>org.codehaus.fitnesse-web</groupId>
     <artifactId>fitnesse-proxy</artifactId>
     <packaging>jar</packaging>
     <name>fitnesse-proxy</name>

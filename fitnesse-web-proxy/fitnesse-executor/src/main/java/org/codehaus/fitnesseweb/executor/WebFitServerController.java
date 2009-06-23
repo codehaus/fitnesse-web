@@ -1,10 +1,9 @@
 package org.codehaus.fitnesseweb.executor;
 
-import fit.Fixture;
 import fit.FixtureLoader;
+import org.codehaus.fitnesseweb.fixture.SpringFixtureLoader;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Required;
-import org.springframework.beans.factory.config.AutowireCapableBeanFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.core.task.TaskExecutor;
@@ -61,19 +60,7 @@ public class WebFitServerController implements Runnable, ApplicationContextAware
     }
 
     private void registerSpringAwareFixtureLoader() throws ClassNotFoundException {
-        FixtureLoader fixtureLoader = new FixtureLoader() {
-            @Override
-            public Fixture disgraceThenLoad(String tableName) throws Throwable {
-                Fixture fixture = super.disgraceThenLoad(tableName);
-                applicationContext.getAutowireCapableBeanFactory().autowireBeanProperties(fixture,
-                        AutowireCapableBeanFactory.AUTOWIRE_BY_NAME, false);
-                if (fixture instanceof ApplicationContextAware){
-                    ((ApplicationContextAware) fixture).setApplicationContext(applicationContext);
-                }
-                return fixture;
-            }
-        };
-        FixtureLoader.setInstance(fixtureLoader);
+        FixtureLoader.setInstance(new SpringFixtureLoader(this.applicationContext));
     }
 
     public void destroy() throws IOException {
@@ -87,4 +74,5 @@ public class WebFitServerController implements Runnable, ApplicationContextAware
         fitServerController.setSocketPort(7777);
         fitServerController.run();
     }
+
 }

@@ -1,0 +1,5 @@
+!3 !-slim:fitnesse.slim.SlimService-!
+|'''Date: '''|!-8:27:14 AM (CST) on Monday, November 24, 2008-!|
+|'''Command: '''|!-java -cp /Users/unclebob/projects/JukeBox/out/production/JukeBox:classes:fitnesse.jar:fitlibrary.jar fitnesse.slim.SlimService  8093-!|
+|'''Exit code: '''|!-0-!|
+|'''Time elapsed: '''|!-1.216 seconds-!|

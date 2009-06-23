@@ -1,0 +1,22 @@
+!contents
+
+'''Caution:''' Don't remove or modify these path statements unless you know what you are doing!
+
+#!path classes
+#!path fitnesse.jar
+#!path fitlibrary.jar
+
+
+!3 ''classpath''
+!path target/dependency/*.jar
+
+
+#!define COLLAPSE_SETUP {true}
+
+# Uncomment below lines to use web fitnesse
+!define TEST_RUNNER {org.codehaus.fitnesseweb.fixture.SpringFitServer}
+
+#!define COMMAND_PATTERN {java -showversion -Xms128M -Xmx256m -ea -cp %p %m}
+
+#if have problems with StackOverflowError or OutOfMemoryError you might remove or adjust -Xss parameter
+# !define COMMAND_PATTERN {java -showversion -XX:MaxPermSize=256m -Xms64M -Xmx900m -Dcom.sun.management.jmxremote -Djava.rmi.server.hostname=127.0.0.1 -Dselect.pages.dynamically=true -Dfit.dynamic.server.ports.configuration=true -ea -Xss128k  -cp %p %m}

@@ -1,0 +1,5 @@
+!3 !-fit:fit.FitServer-!
+|'''Date: '''|!-6:30:22 PM (CDT) on Monday, October 27, 2008-!|
+|'''Command: '''|!-java -cp classes:lib/fitlibrary.jar:fitnesse.jar:fitlibrary.jar fit.FitServer 248.8.242.10.in-addr.arpa 8080 4-!|
+|'''Exit code: '''|!-0-!|
+|'''Time elapsed: '''|!-0.736 seconds-!|

@@ -1,0 +1,10 @@
+!3 !-slim:fitnesse.slim.SlimService-!
+|'''Date: '''|!-10:01:58 AM (CST) on Friday, November 28, 2008-!|
+|'''Command: '''|!--!|
+|'''Exit code: '''|!--1-!|
+|'''Time elapsed: '''|!-0.0 seconds-!|
+!3 !-fit:fit.FitServer-!
+|'''Date: '''|!-10:01:58 AM (CST) on Friday, November 28, 2008-!|
+|'''Command: '''|!--!|
+|'''Exit code: '''|!--1-!|
+|'''Time elapsed: '''|!-0.0 seconds-!|
