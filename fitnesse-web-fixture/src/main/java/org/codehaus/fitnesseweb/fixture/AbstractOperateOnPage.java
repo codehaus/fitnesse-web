@@ -4,6 +4,7 @@ import com.thoughtworks.selenium.DefaultSelenium;
 import com.thoughtworks.selenium.SeleniumException;
 import fitlibrary.DoFixture;
 import org.springframework.beans.factory.annotation.Required;
+import org.springframework.util.Assert;
 
 import java.text.MessageFormat;
 import java.util.Map;
@@ -19,12 +20,12 @@ public abstract class AbstractOperateOnPage extends DoFixture {
         return checkVisibility(element, true, seconds);
     }
 
-    public void typeOn(String text, String element) {
+    public void typeIn(String text, String element) {
         String locator = findLocator(element);
         selenium.type(locator, text);
     }
 
-    public void typeOnWithKeyEvents(String text, String element) {
+    public void typeInWithKeyEvents(String text, String element) {
         String locator = findLocator(element);
         selenium.typeKeys(locator, text);
     }
@@ -185,21 +186,20 @@ public abstract class AbstractOperateOnPage extends DoFixture {
     protected abstract Map<String, String> getLocatorsMap();
 
     protected String findLocator(String element) {
-//        Map<String, String> locatorsMap = getLocatorsMap();
+        Map<String, String> locatorsMap = getLocatorsMap();
 //        Perl5Matcher matcher = new Perl5Matcher();
-//        String locator;
+        String locator;
 //        if (matcher.matches(element, ROW_LOCATOR_PATTERN)) {
 //            MatchResult matchResult = matcher.getMatch();
 //            String elementName = matchResult.group(1);
 //            int rowIndex = Integer.parseInt(matchResult.group(2)) - 1;
 //            locator = MessageFormat.format(locatorsMap.get(elementName), rowIndex);
 //        } else {
-//            locator = locatorsMap.get(element);
+            locator = locatorsMap.get(element);
 //        }
-//        Assert.notNull(locator, "Cannot find locator for element " + element);
-//
-//        return locator;
-        return "";
+        Assert.notNull(locator, "Cannot find locator for element " + element);
+
+        return locator;
     }
 
     @Required

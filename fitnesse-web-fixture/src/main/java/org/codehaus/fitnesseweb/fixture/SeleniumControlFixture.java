@@ -15,7 +15,7 @@ public class SeleniumControlFixture extends DoFixture implements ApplicationCont
     private static final String SELENIUM_BEAN_NAME = "selenium";
     private String browserName = "*iexploreproxy";
     private ApplicationContext applicationContext;
-    private String applicationRoot = "";
+    protected String applicationRoot = "";
     private State state = State.STOPPED;
 
     public void theBrowserIs(String browserName) {
