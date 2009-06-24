@@ -1,4 +1,3 @@
-!|org.codehaus.fitnesseweb.fixture.SeleniumControlFixture|
+!|org.codehaus.fitnesseweb.example.standalone.MyControlFixture|
 |The Browser Is|*iexplore|
-|The Time Is|12:00 06/01/2008|
 | Start Application |

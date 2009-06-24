@@ -8,15 +8,15 @@
 
 
 !3 ''classpath''
+!path target/classes
 !path target/dependency/*.jar
-
 
 #!define COLLAPSE_SETUP {true}
 
 # Uncomment below lines to use web fitnesse
 !define TEST_RUNNER {org.codehaus.fitnesseweb.fixture.SpringFitServer}
 
-#!define COMMAND_PATTERN {java -showversion -Xms128M -Xmx256m -ea -cp %p %m}
+#!define COMMAND_PATTERN {java -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005 -Xms128M -Xmx256m -ea -cp %p %m}
 
 #if have problems with StackOverflowError or OutOfMemoryError you might remove or adjust -Xss parameter
-# !define COMMAND_PATTERN {java -showversion -XX:MaxPermSize=256m -Xms64M -Xmx900m -Dcom.sun.management.jmxremote -Djava.rmi.server.hostname=127.0.0.1 -Dselect.pages.dynamically=true -Dfit.dynamic.server.ports.configuration=true -ea -Xss128k  -cp %p %m}
+# !define COMMAND_PATTERN {java  -Xdebug -Xrunjdwp:transport=dt_socket,server=n,address=5005,suspend=y -XX:MaxPermSize=256m -Xms64M -Xmx900m -Dcom.sun.management.jmxremote -Djava.rmi.server.hostname=127.0.0.1 -Dselect.pages.dynamically=true -Dfit.dynamic.server.ports.configuration=true  -ea -Xss128k  -cp %p %m}

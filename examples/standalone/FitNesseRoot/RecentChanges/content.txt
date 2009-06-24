@@ -1,8 +1,8 @@
+|MyProject.SimpleSuite.FirstTest||02:05:12 Wed, Jun 24, 2009|
+|MyProject.SuiteSetUp||01:45:08 Wed, Jun 24, 2009|
 |||24:17:23 Wed, Jun 24, 2009|
-|MyProject.SimpleSuite.FirstTest||22:08:33 Sun, Jun 21, 2009|
 |MyProject||22:04:17 Sun, Jun 21, 2009|
 |MyProject.SuiteTearDown||22:03:13 Sun, Jun 21, 2009|
-|MyProject.SuiteSetUp||22:02:38 Sun, Jun 21, 2009|
 |MyProject.SimpleSuite||21:59:58 Sun, Jun 21, 2009|
 |FitNesse.SliM.SlimProtocol||15:13:47 Sun, Nov 30, 2008|
 |JunkParent.SlimTest||07:34:27 Sat, Nov 29, 2008|
