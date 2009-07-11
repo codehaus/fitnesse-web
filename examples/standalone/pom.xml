@@ -11,7 +11,7 @@
         <fitnesse.web.remote.port>7777</fitnesse.web.remote.port>
         <fitnesse.web.browser>*firefox</fitnesse.web.browser>
         <fitnesse.web.browser.signleWindow>true</fitnesse.web.browser.signleWindow>
-        <fitnesse.page>Project.WorkingTests</fitnesse.page>
+        <fitnesse.page>MyProject</fitnesse.page>
     </properties>
     <dependencies>
         <dependency>
@@ -47,7 +47,7 @@
         <dependency>
             <groupId>org.fitnesse</groupId>
             <artifactId>fitlibrary</artifactId>
-            <version>20081102</version>
+            <version>20080812</version>
         </dependency>
         <dependency>
             <groupId>org.codehaus.fitnesse-web</groupId>
@@ -58,6 +58,13 @@
     </dependencies>
     <build>
         <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.5</source>
+                    <target>1.5</target>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.codehaus.fitnesse-web</groupId>
                 <artifactId>maven-fitnesse-server-plugin</artifactId>
@@ -145,12 +152,12 @@
                     <dependency>
                         <groupId>org.fitnesse</groupId>
                         <artifactId>fitlibrary</artifactId>
-                        <version>20081102</version>
+                        <version>20080812</version>
                     </dependency>
                     <dependency>
                         <groupId>org.codehaus.fitnesse-web</groupId>
                         <artifactId>fitnesse-proxy</artifactId>
-                        <version>1.0</version>
+                        <version>1.0.2</version>
                         <type>jar</type>
                     </dependency>
                 </dependencies>

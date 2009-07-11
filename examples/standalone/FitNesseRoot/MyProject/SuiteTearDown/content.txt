@@ -1,2 +1,2 @@
-|Selenium Control|
+!|org.codehaus.fitnesseweb.example.standalone.MyControl|
 |Close Application|

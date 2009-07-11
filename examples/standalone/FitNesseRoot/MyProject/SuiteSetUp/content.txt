@@ -1,3 +1,7 @@
-!|org.codehaus.fitnesseweb.example.standalone.MyControlFixture|
+|Import|
+|org.codehaus.fitnesseweb.example.standalone|
+|org.codehaus.fitnesseweb.fixture|
+
+!|My Control|
 |The Browser Is|*iexplore|
 | Start Application |

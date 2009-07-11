@@ -1,2 +1,6 @@
+|Go To Page|http://localhost:8025/MyProject.SimpleSuite.FirstTest|
+
+|Is On Page|http://localhost:8025/MyProject.SimpleSuite.FirstTest|
+
 |Operate On Page|home|
-|type|ala|in|search|
+|wait for|gospodarka|on page for|10|seconds|

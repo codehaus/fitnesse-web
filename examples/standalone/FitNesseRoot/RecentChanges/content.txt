@@ -1,8 +1,10 @@
-|MyProject.SimpleSuite.FirstTest||02:05:12 Wed, Jun 24, 2009|
-|MyProject.SuiteSetUp||01:45:08 Wed, Jun 24, 2009|
+|MyProject.SuiteTearDown||23:17:44 So, lip 11, 2009|
+|MyProject.DemoTest||22:12:19 Cz, cze 25, 2009|
+|MyProject.SimpleSuite.FirstTest||19:24:47 Cz, cze 25, 2009|
+|MyProject.SuiteSetUp||11:13:18 Cz, cze 25, 2009|
+|FrontPage||10:41:43 Cz, cze 25, 2009|
 |||24:17:23 Wed, Jun 24, 2009|
 |MyProject||22:04:17 Sun, Jun 21, 2009|
-|MyProject.SuiteTearDown||22:03:13 Sun, Jun 21, 2009|
 |MyProject.SimpleSuite||21:59:58 Sun, Jun 21, 2009|
 |FitNesse.SliM.SlimProtocol||15:13:47 Sun, Nov 30, 2008|
 |JunkParent.SlimTest||07:34:27 Sat, Nov 29, 2008|
@@ -21,7 +23,6 @@
 |ProjectPage.JukeBox.JukeBoxStories.PlayThreeSongs||21:44:03 Sun, Nov 23, 2008|
 |ProjectPage.JukeBox.JukeBoxStories.PlayOneSong||21:40:17 Sun, Nov 23, 2008|
 |ProjectPage.JukeBox.SetUp||21:39:37 Sun, Nov 23, 2008|
-|FrontPage||10:27:05 Tue, Nov 18, 2008|
 |ProjectPage.JukeBox.JukeBoxStories.CreditsAccumulateWithPayment||01:48:51 Tue, Nov 18, 2008|
 |ProjectPage.JukeBox||12:14:43 Mon, Nov 17, 2008|
 |ProjectPage.JukeBox.JukeBoxStories.PaymentDeterminesCredits||12:04:43 Mon, Nov 17, 2008|
@@ -97,4 +98,3 @@
 |FitNesse.SuiteAcceptanceTests.SuiteWidgetTests.TestNormalListWithLeadingNumbers||08:01:17 Sun, Oct 26, 2008|
 |FitNesse.SuiteAcceptanceTests.SuiteWidgetTests.TestMultiLineTable||07:59:49 Sun, Oct 26, 2008|
 |FitNesse.SuiteAcceptanceTests.SuiteWidgetTests.TestLiteral||07:55:06 Sun, Oct 26, 2008|
-|FitNesse.SuiteAcceptanceTests.SuiteWidgetTests.TestLineBreak||07:27:29 Sun, Oct 26, 2008|
