@@ -18,7 +18,7 @@
         <dependency>
             <groupId>org.fitnesse</groupId>
             <artifactId>fitlibrary</artifactId>
-            <version>20081102</version>
+            <version>20080812</version>
         </dependency>
     </dependencies>
     <modules>
