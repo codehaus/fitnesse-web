@@ -4,7 +4,7 @@
     <parent>
         <groupId>org.codehaus.fitnesse-web</groupId>
         <artifactId>fitnesse-web</artifactId>
-        <version>1.0.2</version>
+        <version>1.0.3</version>
     </parent>
     <artifactId>maven-fitnesse-server-plugin</artifactId>
     <packaging>maven-plugin</packaging>

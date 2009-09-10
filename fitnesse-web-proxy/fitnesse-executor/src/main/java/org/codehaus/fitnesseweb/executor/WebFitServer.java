@@ -12,7 +12,7 @@ import java.io.*;
 import java.net.Socket;
 
 public class WebFitServer {
-
+    private int testNumber = 0;
     private Parse tables;
     private Fixture fixture = new Fixture();
     private FixtureListener fixtureListener = new TablePrintingFixtureListener();
@@ -149,6 +149,15 @@ public class WebFitServer {
         FitProtocol.writeCounts(counts, socketOutput);
     }
 
+    public void setFixtureListener(FixtureListener fixtureListener) {
+        if (fixtureListener != null) {
+            CompositeFixtureListener compositeFixtureListener = new CompositeFixtureListener();
+            compositeFixtureListener.addFixtureListener(this.fixtureListener);
+            compositeFixtureListener.addFixtureListener(fixtureListener);
+            this.fixtureListener = compositeFixtureListener;
+        }
+    }
+
     class TablePrintingFixtureListener implements FixtureListener {
         public void tableFinished(Parse table) {
             try {
@@ -169,4 +178,5 @@ public class WebFitServer {
             }
         }
     }
+
 }

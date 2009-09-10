@@ -5,7 +5,7 @@
     <artifactId>fitnesse-web</artifactId>
     <packaging>pom</packaging>
     <name>fitnesse-web</name>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <description>Fitnesse Web</description>
     <developers>
         <developer>

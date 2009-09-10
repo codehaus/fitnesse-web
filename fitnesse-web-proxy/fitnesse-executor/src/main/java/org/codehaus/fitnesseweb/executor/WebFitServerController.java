@@ -1,6 +1,7 @@
 package org.codehaus.fitnesseweb.executor;
 
 import fit.FixtureLoader;
+import fit.FixtureListener;
 import org.codehaus.fitnesseweb.fixture.SpringFixtureLoader;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Required;
@@ -19,6 +20,7 @@ public class WebFitServerController implements Runnable, ApplicationContextAware
     private ApplicationContext applicationContext;
     private ServerSocket serverSocket;
     private TaskExecutor taskExecutor;
+    private FixtureListener fixtureListener;
     private boolean closing = false;
 
     @Required
@@ -43,7 +45,9 @@ public class WebFitServerController implements Runnable, ApplicationContextAware
         try {
             while (!closing) {
                 Socket socket = serverSocket.accept();
-                new WebFitServer(socket, verbose).run();
+                WebFitServer webFitServer = new WebFitServer(socket, verbose);
+                webFitServer.setFixtureListener(fixtureListener);
+                webFitServer.run();
             }
         } catch (SocketException se) {
             System.out.println("server socket closed");
@@ -75,4 +79,7 @@ public class WebFitServerController implements Runnable, ApplicationContextAware
         fitServerController.run();
     }
 
+    public void setFixtureListener(FixtureListener fixtureListener) {
+        this.fixtureListener = fixtureListener;
+    }
 }

@@ -15,5 +15,8 @@ http://www.springframework.org/schema/beans http://www.springframework.org/schem
         <property name="taskExecutor" ref="taskExecutor"/>
         <property name="socketPort" value="7777"/>
         <property name="verbose" value="true"/>
+        <property name="fixtureListener" ref="teamCityFixtureListener"/>
     </bean>
+
+    <bean id="teamCityFixtureListener" class="org.codehaus.fitnesseweb.executor.TeamCityFixtureListener"/>
 </beans>
