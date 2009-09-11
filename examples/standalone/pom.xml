@@ -4,7 +4,7 @@
     <groupId>org.codehaus.fitnesse-web</groupId>
     <artifactId>fitnesse-web-example-standalone</artifactId>
     <packaging>jar</packaging>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <properties>
         <fitnesse.web.version>1.0.2</fitnesse.web.version>
         <fitnesse.port>8025</fitnesse.port>
@@ -157,7 +157,7 @@
                     <dependency>
                         <groupId>org.codehaus.fitnesse-web</groupId>
                         <artifactId>fitnesse-proxy</artifactId>
-                        <version>1.0.2</version>
+                        <version>1.0.3</version>
                         <type>jar</type>
                     </dependency>
                 </dependencies>
