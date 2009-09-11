@@ -12,7 +12,6 @@ import java.io.*;
 import java.net.Socket;
 
 public class WebFitServer {
-    private int testNumber = 0;
     private Parse tables;
     private Fixture fixture = new Fixture();
     private FixtureListener fixtureListener = new TablePrintingFixtureListener();
