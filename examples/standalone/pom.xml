@@ -4,9 +4,9 @@
     <groupId>org.codehaus.fitnesse-web</groupId>
     <artifactId>fitnesse-web-example-standalone</artifactId>
     <packaging>jar</packaging>
-    <version>1.0.4</version>
+    <version>1.0.5</version>
     <properties>
-        <fitnesse.web.version>1.0.4</fitnesse.web.version>
+        <fitnesse.web.version>1.0.5</fitnesse.web.version>
         <fitnesse.port>8025</fitnesse.port>
         <fitnesse.web.remote.port>7777</fitnesse.web.remote.port>
         <fitnesse.web.browser>*firefox</fitnesse.web.browser>
@@ -157,7 +157,7 @@
                     <dependency>
                         <groupId>org.codehaus.fitnesse-web</groupId>
                         <artifactId>fitnesse-proxy</artifactId>
-                        <version>1.0.4</version>
+                        <version>1.0.5</version>
                         <type>jar</type>
                     </dependency>
                 </dependencies>
@@ -187,7 +187,7 @@
                         <artifactItem>
                             <groupId>org.codehaus.fitnesse-web</groupId>
                             <artifactId>fitnesse-proxy</artifactId>
-                            <version>1.0.4</version>
+                            <version>1.0.5</version>
                             <type>jar</type>
                             <overWrite>false</overWrite>
                             <destFileName>fitnesse-proxy.jar</destFileName>

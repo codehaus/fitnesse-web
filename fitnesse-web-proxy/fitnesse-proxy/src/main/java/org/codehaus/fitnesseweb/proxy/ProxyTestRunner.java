@@ -113,7 +113,7 @@ public class ProxyTestRunner {
         args(args);
         fitServer = new ProxyFitServer(host, port, remotePort, debug);
         fixtureListener = new ProxyTestRunnerFixtureListener(this);
-//      fitServer.fixtureListener = fixtureListener;
+        fitServer.fixtureListener = fixtureListener;
         fitServer.establishConnection(makeHttpRequest());
         fitServer.validateConnection();
         if (usingDownloadedPaths) {
@@ -136,7 +136,7 @@ public class ProxyTestRunner {
     }
 
     private void finalCount() throws Exception {
-        Counts counts = fitServer.getCounts();
+        Counts counts = fixtureListener.counts;
         handler.acceptFinalCount(new TestSummary(counts.right, counts.wrong, counts.ignores, counts.exceptions));
     }
 

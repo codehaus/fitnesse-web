@@ -3,6 +3,7 @@ package org.codehaus.fitnesseweb.proxy;
 import fit.Counts;
 import fit.Fixture;
 import fit.Parse;
+import fit.FixtureListener;
 import fit.exception.FitParseException;
 import fitnesse.components.CommandLine;
 import fitnesse.components.FitProtocol;
@@ -24,6 +25,7 @@ public class ProxyFitServer {
     private StreamReader serverSocketReader;
     private OutputStream remoteSocketOutput;
     private StreamReader remoteSocketReader;
+    public FixtureListener fixtureListener = null;
     private boolean verbose = false;
     private String host;
     private int port;
@@ -100,9 +102,16 @@ public class ProxyFitServer {
         while ((remoteSize = FitProtocol.readSize(remoteSocketReader)) != 0) {
             String remoteDocument = FitProtocol.readDocument(remoteSocketReader, remoteSize);
             FitProtocol.writeData(remoteDocument, serverSocketOutput);
+            if (fixtureListener != null){
+                fixtureListener.tableFinished(new Parse(remoteDocument));
+            }
+
         }
         Counts remoteCounts = FitProtocol.readCounts(remoteSocketReader);
         FitProtocol.writeCounts(remoteCounts, serverSocketOutput);
+        if (fixtureListener != null){
+            fixtureListener.tablesFinished(remoteCounts);
+        }
     }
 
     public void args(String[] argv) {

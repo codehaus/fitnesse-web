@@ -39,7 +39,7 @@ public class ProxyTestRunnerFixtureListener implements FixtureListener {
 
    public void tablesFinished(Counts count) {
       try {
-         currentPageResult.setTestSummary(new TestSummary(counts.right, counts.wrong, counts.ignores, counts.exceptions));
+         currentPageResult.setTestSummary(new TestSummary(count.right, count.wrong, count.ignores, count.exceptions));
          runner.acceptResults(currentPageResult);
          atStartOfResult = true;
          counts.tally(count);

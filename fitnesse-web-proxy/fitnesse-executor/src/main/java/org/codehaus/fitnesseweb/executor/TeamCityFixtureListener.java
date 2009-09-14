@@ -18,8 +18,11 @@ class TeamCityFixtureListener implements FixtureListener {
             testInProgreess = true;
             testCounter++;
             startTime = System.currentTimeMillis();
-            testName = table.leader.substring(0, table.leader.indexOf('\n'));
-            if (testName == null){
+            int indexOfEOL = table.leader.indexOf('\n');
+
+            if (indexOfEOL > 0){
+                testName = table.leader.substring(0, indexOfEOL);
+            }else {
                 testName = "Fitnesse test nr "+ testCounter;
             }
             System.out.println("##teamcity[testStarted name='" + testName + "']");
